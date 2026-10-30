@@ -1,2 +1,41 @@
-# darkonPropTracker-secured
-Security-hardened copy of darkonPropTracker; original repository remains unchanged.
+# Darkon Proposal Tracker — secured copy
+
+Security-hardened standalone copy of [the original repository](https://github.com/zrandrews-achesmakes/darkonPropTracker), based on commit `883f25464317daf3a452d95bdbeee343efc11eb8`. See [SECURITY.md](SECURITY.md) for safeguards and validation.
+
+
+Tracks rule proposals from the Darkon Crownlands Community Discord
+(`#proposal-discussions`), summarized and ready to turn into EasyPoll
+`/poll` blocks for Senate votes.
+
+## Layout
+
+- `WORKFLOW.md` — the recurring review workflow: how proposals are found,
+  read, summarized, recorded, and pushed.
+- `proposals/` — one JSON record per proposal (`SCHEMA.md` documents the
+  fields). `status` is the authoritative lifecycle field; `easypoll_blocks`
+  holds ready-to-paste `/poll` blocks — a single all-or-nothing block per
+  proposal, or one per line item only when the proposal document itself
+  explicitly designates line-item votes.
+- `poll-format.json` — the EasyPoll block format: fields, exact Yes / No /
+  Abstain options, line-item rule.
+- `history.json` — audit trail of proposal events.
+- `reported.json` — Discord message IDs already processed (not re-reported).
+- `pipeline/` — **rebuild kit**: portable copies of the Discord reader and
+  GitHub sync tools plus a guide to reconstruct the whole process on any AI
+  tool or a new Muse account. Start at `pipeline/README.md`.
+
+## Data consumers
+
+The public Darkon Proposals board reads this repo live (no auth needed —
+it's public). Raw file URLs look like:
+
+```
+https://zrandrews-achesmakes.github.io/darkonPropTracker-secured/
+```
+
+To enumerate proposal files, use the repo tree:
+
+```
+https://api.github.com/repos/zrandrews-achesmakes/darkonPropTracker-secured/git/trees/main?recursive=1
+```
+

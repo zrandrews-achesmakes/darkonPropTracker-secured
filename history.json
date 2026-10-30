@@ -1,0 +1,678 @@
+{
+  "version": 1,
+  "event_types": {
+    "created": "Proposal first seen; enters status 'new'.",
+    "baseline": "One-time audit baseline (2026-09-27); earlier transitions were not recorded.",
+    "status_change": "Status moved from one lifecycle value to another.",
+    "field_update": "Non-status field changed (summary, links, etc.)."
+  },
+  "actors": [
+    "workflow",
+    "navi",
+    "zachary"
+  ],
+  "events": [
+    {
+      "at": "2026-05-19T22:56:00Z",
+      "proposal_id": "shoe-color",
+      "type": "created",
+      "from": null,
+      "to": "new",
+      "actor": "workflow",
+      "note": "First seen in #proposal-discussions."
+    },
+    {
+      "at": "2026-07-15T18:12:00Z",
+      "proposal_id": "simplified-touch-spell-damage",
+      "type": "created",
+      "from": null,
+      "to": "new",
+      "actor": "workflow",
+      "note": "First seen in #proposal-discussions."
+    },
+    {
+      "at": "2026-07-17T23:15:00Z",
+      "proposal_id": "pouch",
+      "type": "created",
+      "from": null,
+      "to": "new",
+      "actor": "workflow",
+      "note": "First seen in #proposal-discussions."
+    },
+    {
+      "at": "2026-07-18T00:09:00Z",
+      "proposal_id": "spell-footnotes",
+      "type": "created",
+      "from": null,
+      "to": "new",
+      "actor": "workflow",
+      "note": "First seen in #proposal-discussions."
+    },
+    {
+      "at": "2026-07-22T15:06:00Z",
+      "proposal_id": "gaseous-shadow-walk",
+      "type": "created",
+      "from": null,
+      "to": "new",
+      "actor": "workflow",
+      "note": "First seen in #proposal-discussions."
+    },
+    {
+      "at": "2026-07-27T02:04:00Z",
+      "proposal_id": "shillelagh-shield-break",
+      "type": "created",
+      "from": null,
+      "to": "new",
+      "actor": "workflow",
+      "note": "First seen in #proposal-discussions."
+    },
+    {
+      "at": "2026-07-28T22:08:00Z",
+      "proposal_id": "non-combat-changes",
+      "type": "created",
+      "from": null,
+      "to": "new",
+      "actor": "workflow",
+      "note": "First seen in #proposal-discussions."
+    },
+    {
+      "at": "2026-08-08T00:00:00Z",
+      "proposal_id": "shoe-color",
+      "type": "baseline",
+      "from": "new",
+      "to": "voted",
+      "actor": "navi",
+      "note": "Audit baseline established 2026-09-27. Voted at 2026-08-08 Senate; outcome unknown. Earlier transitions not recorded."
+    },
+    {
+      "at": "2026-08-08T00:00:00Z",
+      "proposal_id": "simplified-touch-spell-damage",
+      "type": "baseline",
+      "from": "new",
+      "to": "presented",
+      "actor": "navi",
+      "note": "Audit baseline established 2026-09-27. Presented at 2026-08-08 Senate per record. Earlier transitions not recorded."
+    },
+    {
+      "at": "2026-08-08T00:00:00Z",
+      "proposal_id": "pouch",
+      "type": "baseline",
+      "from": "new",
+      "to": "presented",
+      "actor": "navi",
+      "note": "Audit baseline established 2026-09-27. Presented at 2026-08-08 Senate per record. Earlier transitions not recorded."
+    },
+    {
+      "at": "2026-08-08T00:00:00Z",
+      "proposal_id": "spell-footnotes",
+      "type": "baseline",
+      "from": "new",
+      "to": "presented",
+      "actor": "navi",
+      "note": "Audit baseline established 2026-09-27. Presented at 2026-08-08 Senate per record. Earlier transitions not recorded."
+    },
+    {
+      "at": "2026-08-08T00:00:00Z",
+      "proposal_id": "gaseous-shadow-walk",
+      "type": "baseline",
+      "from": "new",
+      "to": "presented",
+      "actor": "navi",
+      "note": "Audit baseline established 2026-09-27. Presented at 2026-08-08 Senate per record. Earlier transitions not recorded."
+    },
+    {
+      "at": "2026-08-08T00:00:00Z",
+      "proposal_id": "non-combat-changes",
+      "type": "baseline",
+      "from": "new",
+      "to": "presented",
+      "actor": "navi",
+      "note": "Audit baseline established 2026-09-27. Presented at 2026-08-08 Senate per record. Earlier transitions not recorded."
+    },
+    {
+      "at": "2026-08-16T18:50:00Z",
+      "proposal_id": "class-symbol",
+      "type": "created",
+      "from": null,
+      "to": "new",
+      "actor": "workflow",
+      "note": "First seen in #proposal-discussions."
+    },
+    {
+      "at": "2026-09-27T16:32:05Z",
+      "proposal_id": "darkon-bot-test-prop",
+      "type": "created",
+      "from": null,
+      "to": "new",
+      "actor": "workflow",
+      "note": "First seen in #proposal-discussions."
+    },
+    {
+      "actor": "zachary",
+      "at": "2026-09-27T23:57:58Z",
+      "from": "new",
+      "note": "Manual change from Darkon Board Editor",
+      "proposal_id": "darkon-bot-test-prop",
+      "to": "canceled",
+      "type": "status_change"
+    },
+    {
+      "type": "status_change",
+      "proposal_id": "darkon-bot-test-prop",
+      "from": "canceled",
+      "to": "new",
+      "actor": "zachary",
+      "at": "2026-09-28T01:02:48Z",
+      "note": "Zachary asked Navi to move it back to new and generate the poll block."
+    },
+    {
+      "type": "field_update",
+      "proposal_id": "darkon-bot-test-prop",
+      "fields": [
+        "line_items",
+        "summary",
+        "easypoll_blocks",
+        "notes"
+      ],
+      "actor": "zachary",
+      "at": "2026-09-28T01:05:12Z",
+      "note": "Treated as a votable test case at Zachary’s request: two line items identified from the doc, one poll block generated per line item."
+    },
+    {
+      "type": "status_change",
+      "proposal_id": "darkon-bot-test-prop",
+      "from": "new",
+      "to": "withdrawn",
+      "actor": "zachary",
+      "at": "2026-09-28T02:44:01Z",
+      "note": "Zachary asked Navi to mark the test record withdrawn."
+    },
+    {
+      "type": "status_change",
+      "proposal_id": "shoe-color",
+      "from": "voted",
+      "to": "passed",
+      "actor": "zachary",
+      "at": "2026-09-28T02:51:51Z",
+      "note": "Zachary asked Navi to mark it passed."
+    },
+    {
+      "at": "2026-09-28T11:53:48Z",
+      "proposal_id": "shillelagh-shield-break",
+      "type": "status_change",
+      "from": "new",
+      "to": "withdrawn",
+      "actor": "zachary",
+      "note": "Withdrawn per Zachary, 2026-09-28."
+    },
+    {
+      "at": "2026-10-03T15:45:43Z",
+      "proposal_id": "bod-bylaws-reconsideration",
+      "type": "created",
+      "from": null,
+      "to": "new",
+      "actor": "navi",
+      "note": "Added from the 2026-10-03 Senate agenda (#agenda-presenting); never posted in #proposal-discussions."
+    },
+    {
+      "at": "2026-10-03T15:45:43Z",
+      "proposal_id": "bod-bylaws-reconsideration",
+      "type": "status_change",
+      "from": "new",
+      "to": "presented",
+      "actor": "navi",
+      "note": "Straight-to-agenda per workflow: appeared under Discussion on the 2026-10-03 Senate agenda as 'BOD by laws - (Ulftadhg)'."
+    },
+    {
+      "at": "2026-10-06T16:42:03Z",
+      "proposal_id": "non-combat-changes",
+      "type": "status_change",
+      "from": "presented",
+      "to": "passed",
+      "actor": "zachary",
+      "note": "Voted at the 2026-10-03 Senate; reported passed by Zachary."
+    },
+    {
+      "at": "2026-10-06T16:42:03Z",
+      "proposal_id": "spell-footnotes",
+      "type": "status_change",
+      "from": "presented",
+      "to": "passed",
+      "actor": "zachary",
+      "note": "Voted at the 2026-10-03 Senate; reported passed by Zachary."
+    },
+    {
+      "at": "2026-10-06T16:42:03Z",
+      "proposal_id": "simplified-touch-spell-damage",
+      "type": "status_change",
+      "from": "presented",
+      "to": "passed",
+      "actor": "zachary",
+      "note": "Voted at the 2026-10-03 Senate; reported passed by Zachary."
+    },
+    {
+      "at": "2026-10-06T16:42:03Z",
+      "proposal_id": "gaseous-shadow-walk",
+      "type": "status_change",
+      "from": "presented",
+      "to": "passed",
+      "actor": "zachary",
+      "note": "Voted at the 2026-10-03 Senate; reported passed by Zachary."
+    },
+    {
+      "at": "2026-10-06T16:42:03Z",
+      "proposal_id": "pouch",
+      "type": "status_change",
+      "from": "presented",
+      "to": "passed",
+      "actor": "zachary",
+      "note": "Voted at the 2026-10-03 Senate; reported passed by Zachary."
+    },
+    {
+      "at": "2026-10-30T13:32:10Z",
+      "proposal_id": "bod-bylaws-reconsideration",
+      "type": "status_change",
+      "from": "presented",
+      "to": "Discussed in Senate",
+      "actor": "zachary",
+      "note": "Status migrated on 2026-10-30 to match the GitHub Project 2 'Darkon Proposal Tracker' Status options: presented -> Discussed in Senate. Project 2 lists this proposal as 'Discussed in Senate'."
+    },
+    {
+      "at": "2026-10-30T13:32:10Z",
+      "proposal_id": "class-symbol",
+      "type": "field_update",
+      "from": null,
+      "to": null,
+      "actor": "zachary",
+      "note": "Corrected during the 2026-10-30 status migration: presented_at_senate set to 2026-10-03 and notes updated — Class Symbol was a discussion item at that Senate, it had not simply never appeared."
+    },
+    {
+      "at": "2026-10-30T13:32:10Z",
+      "proposal_id": "class-symbol",
+      "type": "status_change",
+      "from": "new",
+      "to": "Discussed in Senate",
+      "actor": "zachary",
+      "note": "Status migrated on 2026-10-30 to match the GitHub Project 2 'Darkon Proposal Tracker' Status options: new -> Discussed in Senate. Project 2 lists this proposal as 'Discussed in Senate'."
+    },
+    {
+      "at": "2026-10-30T13:32:10Z",
+      "proposal_id": "darkon-bot-test-prop",
+      "type": "status_change",
+      "from": "withdrawn",
+      "to": "Done",
+      "actor": "zachary",
+      "note": "Status migrated on 2026-10-30 to match the GitHub Project 2 'Darkon Proposal Tracker' Status options: withdrawn -> Done (terminal status; test record, not an item on Project 2)."
+    },
+    {
+      "at": "2026-10-30T13:32:10Z",
+      "proposal_id": "gaseous-shadow-walk",
+      "type": "status_change",
+      "from": "passed",
+      "to": "Done",
+      "actor": "zachary",
+      "note": "Status migrated on 2026-10-30 to match the GitHub Project 2 'Darkon Proposal Tracker' Status options: passed -> Done. Project 2 lists this proposal as 'Done'."
+    },
+    {
+      "at": "2026-10-30T13:32:10Z",
+      "proposal_id": "non-combat-changes",
+      "type": "status_change",
+      "from": "passed",
+      "to": "Recorded on #passed-and-pending",
+      "actor": "zachary",
+      "note": "Status migrated on 2026-10-30 to match the GitHub Project 2 'Darkon Proposal Tracker' Status options: passed -> Recorded on #passed-and-pending. Project 2 lists this proposal as 'Recorded on #passed-and-pending'."
+    },
+    {
+      "at": "2026-10-30T13:32:10Z",
+      "proposal_id": "pouch",
+      "type": "status_change",
+      "from": "passed",
+      "to": "Recorded on #passed-and-pending",
+      "actor": "zachary",
+      "note": "Status migrated on 2026-10-30 to match the GitHub Project 2 'Darkon Proposal Tracker' Status options: passed -> Recorded on #passed-and-pending. Project 2 lists this proposal as 'Recorded on #passed-and-pending'."
+    },
+    {
+      "at": "2026-10-30T13:32:10Z",
+      "proposal_id": "shillelagh-shield-break",
+      "type": "status_change",
+      "from": "withdrawn",
+      "to": "Done",
+      "actor": "zachary",
+      "note": "Status migrated on 2026-10-30 to match the GitHub Project 2 'Darkon Proposal Tracker' Status options: withdrawn -> Done. Project 2 lists this proposal as 'Done'."
+    },
+    {
+      "at": "2026-10-30T13:32:10Z",
+      "proposal_id": "shoe-color",
+      "type": "status_change",
+      "from": "passed",
+      "to": "Recorded on #passed-and-pending",
+      "actor": "zachary",
+      "note": "Status migrated on 2026-10-30 to match the GitHub Project 2 'Darkon Proposal Tracker' Status options: passed -> Recorded on #passed-and-pending. Project 2 lists this proposal as 'Recorded on #passed-and-pending'."
+    },
+    {
+      "at": "2026-10-30T13:32:10Z",
+      "proposal_id": "simplified-touch-spell-damage",
+      "type": "status_change",
+      "from": "passed",
+      "to": "Recorded on #passed-and-pending",
+      "actor": "zachary",
+      "note": "Status migrated on 2026-10-30 to match the GitHub Project 2 'Darkon Proposal Tracker' Status options: passed -> Recorded on #passed-and-pending. Project 2 lists this proposal as 'Recorded on #passed-and-pending'."
+    },
+    {
+      "at": "2026-10-30T13:32:10Z",
+      "proposal_id": "spell-footnotes",
+      "type": "status_change",
+      "from": "passed",
+      "to": "Recorded on #passed-and-pending",
+      "actor": "zachary",
+      "note": "Status migrated on 2026-10-30 to match the GitHub Project 2 'Darkon Proposal Tracker' Status options: passed -> Recorded on #passed-and-pending. Project 2 lists this proposal as 'Recorded on #passed-and-pending'."
+    },
+    {
+      "at": "2026-10-30T15:15:33Z",
+      "proposal_id": "bod-bylaws-reconsideration",
+      "type": "status_change",
+      "from": "Discussed in Senate",
+      "to": "Up for Vote",
+      "actor": "zachary",
+      "note": "Status renamed on 2026-10-30 to align with the BOD board statuses, at Zachary's direction: Discussed in Senate -> Up for Vote. Same stage, new name; Project 2 Status option renamed to match."
+    },
+    {
+      "at": "2026-10-30T15:15:33Z",
+      "proposal_id": "class-symbol",
+      "type": "status_change",
+      "from": "Discussed in Senate",
+      "to": "Up for Vote",
+      "actor": "zachary",
+      "note": "Status renamed on 2026-10-30 to align with the BOD board statuses, at Zachary's direction: Discussed in Senate -> Up for Vote. Same stage, new name; Project 2 Status option renamed to match."
+    },
+    {
+      "at": "2026-10-30T15:22:55Z",
+      "proposal_id": "bod-bylaws-reconsideration",
+      "type": "field_update",
+      "from": null,
+      "to": [],
+      "actor": "zachary",
+      "note": "vote_result converted to the multi-value array format on 2026-10-30; no outcomes recorded yet, so it is empty."
+    },
+    {
+      "at": "2026-10-30T15:22:55Z",
+      "proposal_id": "class-symbol",
+      "type": "field_update",
+      "from": null,
+      "to": [],
+      "actor": "zachary",
+      "note": "vote_result converted to the multi-value array format on 2026-10-30; no outcomes recorded yet, so it is empty."
+    },
+    {
+      "at": "2026-10-30T15:22:55Z",
+      "proposal_id": "darkon-bot-test-prop",
+      "type": "field_update",
+      "from": null,
+      "to": [
+        "withdrawn"
+      ],
+      "actor": "zachary",
+      "note": "vote_result set to ['withdrawn'] on 2026-10-30 under the new multi-value scheme (test record, withdrawn at Zachary's direction in Sept 2026)."
+    },
+    {
+      "at": "2026-10-30T15:22:55Z",
+      "proposal_id": "gaseous-shadow-walk",
+      "type": "field_update",
+      "from": "passed",
+      "to": [
+        "passed_senate"
+      ],
+      "actor": "zachary",
+      "note": "vote_result set to ['passed_senate'] on 2026-10-30 under the new multi-value scheme (passed at the 2026-10-03 Senate; its Done status does not document a BOD outcome, so no passed_bod value was added)."
+    },
+    {
+      "at": "2026-10-30T15:22:55Z",
+      "proposal_id": "non-combat-changes",
+      "type": "field_update",
+      "from": "passed",
+      "to": [
+        "passed_senate",
+        "passed_bod"
+      ],
+      "actor": "zachary",
+      "note": "vote_result set to ['passed_senate','passed_bod'] on 2026-10-30 under the new multi-value scheme (passed at the 2026-10-03 Senate; its Recorded status per Project 2 means BOD-approved and posted on #passed-and-pending)."
+    },
+    {
+      "at": "2026-10-30T15:22:55Z",
+      "proposal_id": "pouch",
+      "type": "field_update",
+      "from": "passed",
+      "to": [
+        "passed_senate",
+        "passed_bod"
+      ],
+      "actor": "zachary",
+      "note": "vote_result set to ['passed_senate','passed_bod'] on 2026-10-30 under the new multi-value scheme (passed at the 2026-10-03 Senate; Recorded status per Project 2 means BOD-approved)."
+    },
+    {
+      "at": "2026-10-30T15:22:55Z",
+      "proposal_id": "shillelagh-shield-break",
+      "type": "field_update",
+      "from": null,
+      "to": [
+        "withdrawn"
+      ],
+      "actor": "zachary",
+      "note": "vote_result set to ['withdrawn'] on 2026-10-30 under the new multi-value scheme."
+    },
+    {
+      "at": "2026-10-30T15:22:55Z",
+      "proposal_id": "shoe-color",
+      "type": "field_update",
+      "from": "unknown",
+      "to": [
+        "passed_senate",
+        "passed_bod"
+      ],
+      "actor": "zachary",
+      "note": "vote_result set to ['passed_senate','passed_bod'] on 2026-10-30 under the new multi-value scheme (replaces 'unknown': the proposal passed at the 2026-08-08 Senate per its notes, and its Recorded status per Project 2 means BOD-approved)."
+    },
+    {
+      "at": "2026-10-30T15:22:55Z",
+      "proposal_id": "simplified-touch-spell-damage",
+      "type": "field_update",
+      "from": "passed",
+      "to": [
+        "passed_senate",
+        "passed_bod"
+      ],
+      "actor": "zachary",
+      "note": "vote_result set to ['passed_senate','passed_bod'] on 2026-10-30 under the new multi-value scheme (passed at the 2026-10-03 Senate; Recorded status per Project 2 means BOD-approved)."
+    },
+    {
+      "at": "2026-10-30T15:22:55Z",
+      "proposal_id": "spell-footnotes",
+      "type": "field_update",
+      "from": "passed",
+      "to": [
+        "passed_senate",
+        "passed_bod"
+      ],
+      "actor": "zachary",
+      "note": "vote_result set to ['passed_senate','passed_bod'] on 2026-10-30 under the new multi-value scheme (passed at the 2026-10-03 Senate; Recorded status per Project 2 means BOD-approved)."
+    },
+    {
+      "at": "2026-10-30T15:25:38Z",
+      "proposal_id": "gaseous-shadow-walk",
+      "type": "field_update",
+      "field": "vote_result",
+      "from": [
+        "passed_senate"
+      ],
+      "to": [
+        "passed_senate",
+        "failed_bod"
+      ],
+      "actor": "zachary",
+      "note": "Zachary confirmed on 2026-10-30 that Gaseous failed BOD review; failed_bod appended, superseding the earlier same-day backfill that had left its BOD path undocumented."
+    },
+    {
+      "at": "2026-10-30T15:29:08Z",
+      "proposal_id": "gaseous-shadow-walk",
+      "type": "status_change",
+      "from": "Done",
+      "to": "Withdraw/Fail",
+      "actor": "zachary",
+      "note": "Status option renamed Done -> Withdraw/Fail on 2026-10-30 at Zachary's direction, matching the BOD board's label. No change in meaning or placement."
+    },
+    {
+      "at": "2026-10-30T15:29:08Z",
+      "proposal_id": "shillelagh-shield-break",
+      "type": "status_change",
+      "from": "Done",
+      "to": "Withdraw/Fail",
+      "actor": "zachary",
+      "note": "Status option renamed Done -> Withdraw/Fail on 2026-10-30 at Zachary's direction, matching the BOD board's label. No change in meaning or placement."
+    },
+    {
+      "at": "2026-10-30T15:29:08Z",
+      "proposal_id": "darkon-bot-test-prop",
+      "type": "status_change",
+      "from": "Done",
+      "to": "Withdraw/Fail",
+      "actor": "zachary",
+      "note": "Status option renamed Done -> Withdraw/Fail on 2026-10-30 at Zachary's direction, matching the BOD board's label. No change in meaning or placement."
+    },
+    {
+      "at": "2026-10-30T15:34:03Z",
+      "proposal_id": "bod-bylaws-reconsideration",
+      "type": "field_update",
+      "field": "github_issue_url",
+      "from": null,
+      "to": "https://github.com/zrandrews-achesmakes/darkonPropTracker/issues/1",
+      "actor": "zachary",
+      "note": "Project 2 item for this proposal is a real GitHub issue in zrandrews-achesmakes/darkonPropTracker (items become issues when they move to Up for Vote); URL recorded on 2026-10-30."
+    },
+    {
+      "at": "2026-10-30T15:34:03Z",
+      "proposal_id": "class-symbol",
+      "type": "field_update",
+      "field": "github_issue_url",
+      "from": null,
+      "to": "https://github.com/zrandrews-achesmakes/darkonPropTracker/issues/2",
+      "actor": "zachary",
+      "note": "Project 2 item for this proposal is a real GitHub issue in zrandrews-achesmakes/darkonPropTracker (items become issues when they move to Up for Vote); URL recorded on 2026-10-30."
+    },
+    {
+      "at": "2026-10-30T16:17:00Z",
+      "proposal_id": "monk-rogue-class-tweaks",
+      "type": "created",
+      "actor": "workflow",
+      "note": "Created from cairo's 2026-10-26 #proposal-discussions post during the ad-hoc review run on 2026-10-30 requested by Zachary. Status: To Present. Six separable line items identified in the document, one EasyPoll block generated per line item."
+    },
+    {
+      "at": "2026-10-30T16:22:57Z",
+      "proposal_id": "monk-rogue-class-tweaks",
+      "type": "field_update",
+      "field": "github_issue_url",
+      "from": null,
+      "to": "https://github.com/zrandrews-achesmakes/darkonPropTracker/issues/10",
+      "actor": "workflow",
+      "note": "GitHub issue #10 created in darkonPropTracker and added as a card on Project 2 with status To Present (Zachary flagged that the ad-hoc run had created the tracker record without a project card; card creation is now part of the workflow)."
+    },
+    {
+      "at": "2026-10-30T16:32:30Z",
+      "proposal_id": "monk-rogue-class-tweaks",
+      "type": "field_update",
+      "field": "easypoll_blocks/line_items",
+      "from": "6 line-item poll blocks",
+      "to": "1 all-or-nothing poll block",
+      "actor": "zachary",
+      "note": "Zachary's 2026-10-30 rule adjustment: line items are created only when the document itself calls out a change as a line item to vote on; otherwise the poll is a single all-or-nothing vote. The Monk/Rogue document designates no line items, so its six inferred blocks were replaced with one combined block and line_items cleared."
+    },
+    {
+      "at": "2026-10-30T16:39:18Z",
+      "proposal_id": "class-symbol",
+      "type": "field_update",
+      "field": "summary/easypoll_blocks",
+      "actor": "workflow",
+      "note": "Doc refresh (WORKFLOW Step 2c) on 2026-10-30: the Class Symbol document had been edited 2026-10-03 into a two-option final voting version. Summary rewritten to cover both options; the old rationale bullet was dropped (no rationale in the current doc); poll blocks regenerated as one per option per the document's instruction that both options be put to a vote."
+    },
+    {
+      "at": "2026-10-30T16:47:54Z",
+      "proposal_id": "bod-bylaws-reconsideration",
+      "type": "field_update",
+      "field": "easypoll_blocks",
+      "actor": "zachary",
+      "note": "Summary block removed from the poll block text at Zachary's direction on 2026-10-30: poll text now carries author, post link, and doc link only (summaries remain in the record and on the board cards)."
+    },
+    {
+      "at": "2026-10-30T16:47:54Z",
+      "proposal_id": "class-symbol",
+      "type": "field_update",
+      "field": "easypoll_blocks",
+      "actor": "zachary",
+      "note": "Summary block removed from the poll block text at Zachary's direction on 2026-10-30: poll text now carries author, post link, and doc link only (summaries remain in the record and on the board cards)."
+    },
+    {
+      "at": "2026-10-30T16:47:54Z",
+      "proposal_id": "gaseous-shadow-walk",
+      "type": "field_update",
+      "field": "easypoll_blocks",
+      "actor": "zachary",
+      "note": "Summary block removed from the poll block text at Zachary's direction on 2026-10-30: poll text now carries author, post link, and doc link only (summaries remain in the record and on the board cards)."
+    },
+    {
+      "at": "2026-10-30T16:47:54Z",
+      "proposal_id": "monk-rogue-class-tweaks",
+      "type": "field_update",
+      "field": "easypoll_blocks",
+      "actor": "zachary",
+      "note": "Summary block removed from the poll block text at Zachary's direction on 2026-10-30: poll text now carries author, post link, and doc link only (summaries remain in the record and on the board cards)."
+    },
+    {
+      "at": "2026-10-30T16:47:54Z",
+      "proposal_id": "non-combat-changes",
+      "type": "field_update",
+      "field": "easypoll_blocks",
+      "actor": "zachary",
+      "note": "Summary block removed from the poll block text at Zachary's direction on 2026-10-30: poll text now carries author, post link, and doc link only (summaries remain in the record and on the board cards)."
+    },
+    {
+      "at": "2026-10-30T16:47:54Z",
+      "proposal_id": "pouch",
+      "type": "field_update",
+      "field": "easypoll_blocks",
+      "actor": "zachary",
+      "note": "Summary block removed from the poll block text at Zachary's direction on 2026-10-30: poll text now carries author, post link, and doc link only (summaries remain in the record and on the board cards)."
+    },
+    {
+      "at": "2026-10-30T16:47:54Z",
+      "proposal_id": "shillelagh-shield-break",
+      "type": "field_update",
+      "field": "easypoll_blocks",
+      "actor": "zachary",
+      "note": "Summary block removed from the poll block text at Zachary's direction on 2026-10-30: poll text now carries author, post link, and doc link only (summaries remain in the record and on the board cards)."
+    },
+    {
+      "at": "2026-10-30T16:47:54Z",
+      "proposal_id": "shoe-color",
+      "type": "field_update",
+      "field": "easypoll_blocks",
+      "actor": "zachary",
+      "note": "Summary block removed from the poll block text at Zachary's direction on 2026-10-30: poll text now carries author, post link, and doc link only (summaries remain in the record and on the board cards)."
+    },
+    {
+      "at": "2026-10-30T16:47:54Z",
+      "proposal_id": "simplified-touch-spell-damage",
+      "type": "field_update",
+      "field": "easypoll_blocks",
+      "actor": "zachary",
+      "note": "Summary block removed from the poll block text at Zachary's direction on 2026-10-30: poll text now carries author, post link, and doc link only (summaries remain in the record and on the board cards)."
+    },
+    {
+      "at": "2026-10-30T16:47:54Z",
+      "proposal_id": "spell-footnotes",
+      "type": "field_update",
+      "field": "easypoll_blocks",
+      "actor": "zachary",
+      "note": "Summary block removed from the poll block text at Zachary's direction on 2026-10-30: poll text now carries author, post link, and doc link only (summaries remain in the record and on the board cards)."
+    }
+  ]
+}
+

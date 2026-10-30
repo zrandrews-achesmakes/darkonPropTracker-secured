@@ -1,0 +1,24 @@
+{
+  "command": "/poll",
+  "source": "https://easypoll.com/commands",
+  "usage": "Each block begins with '/poll ' followed by the question on the same line. Type /poll in Discord and paste each value into the matching field.",
+  "options": [
+    "Yes",
+    "No",
+    "Abstain"
+  ],
+  "option_rules": [
+    "Vote options are exactly Yes / No / Abstain.",
+    "A No vote carries no 'needs revision' qualifier."
+  ],
+  "fields": {
+    "question": "<Proposal name> by <Author>",
+    "text": "Author, Discord post link, Google Doc link wrapped in < > (suppresses the Discord link preview). No summary block: summaries live in the proposal record and on the board cards, never inside poll blocks (Zachary, 2026-10-30). This text appears above the poll.",
+    "answer-1": "Yes",
+    "answer-2": "No",
+    "answer-3": "Abstain"
+  },
+  "line_item_rule": "Line items exist ONLY when the proposal document itself explicitly calls out a change as a 'line item' to vote on (rule set by Zachary 2026-10-30). Then generate one poll block per designated line item (the question names the line item) and call them out after the summary bullets. If the document designates no line items, generate a single all-or-nothing poll block for the whole proposal — never infer line items from separable structure.",
+  "prefix": "/poll "
+}
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src https://api.github.com https://raw.githubusercontent.com; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Darkon Proposals — Senate Board</title>
+<style>
+  :root{
+    --bg:#14161c; --panel:#1d2029; --card:#242936; --line:#333a4d;
+    --text:#e8eaf0; --muted:#9aa3b8; --accent:#d8a93f;
+    --new:#6aa8ff; --presented:#b48cff; --scheduled:#ffcf5c;
+    --voted:#7fe0c3; --passed:#6fd98a; --failed:#ff8a8a;
+    --playtest:#5cd6ff; --withdrawn:#a8adbd; --canceled:#6b7280;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  header{padding:18px 24px;border-bottom:1px solid var(--line);
+    display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between}
+  h1{margin:0;font-size:22px;letter-spacing:.3px}
+  h1 .crown{color:var(--accent)}
+  .sub{color:var(--muted);font-size:13px;margin-top:4px}
+  .controls{display:flex;gap:10px;align-items:center}
+  button{background:var(--card);color:var(--text);border:1px solid var(--line);
+    border-radius:8px;padding:8px 14px;cursor:pointer;font-size:14px}
+  button:hover{border-color:var(--accent)}
+  a{color:var(--accent)}
+  main{display:flex;gap:14px;overflow-x:auto;padding:20px 24px 40px;align-items:flex-start;min-height:60vh}
+  .col{flex:0 0 320px;background:var(--panel);border:1px solid var(--line);
+    border-radius:12px;display:flex;flex-direction:column;max-height:calc(100vh - 220px)}
+  .col-head{padding:12px 14px;border-bottom:1px solid var(--line);
+    display:flex;justify-content:space-between;align-items:center;position:sticky;top:0}
+  .col-title{font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.6px}
+  .count{background:var(--card);border:1px solid var(--line);border-radius:20px;
+    padding:2px 10px;font-size:12px;color:var(--muted)}
+  .cards{padding:12px;display:flex;flex-direction:column;gap:12px;overflow-y:auto}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
+  .card h3{margin:0 0 6px;font-size:16px}
+  .meta{font-size:12.5px;color:var(--muted);margin-bottom:8px;line-height:1.5}
+  .pill{display:inline-block;font-size:11px;font-weight:700;text-transform:uppercase;
+    letter-spacing:.5px;border-radius:6px;padding:2px 8px;margin-bottom:8px;color:#10131a}
+  .summary{margin:8px 0;padding-left:18px;font-size:13.5px;line-height:1.55}
+  .summary li{margin-bottom:5px}
+  .links{display:flex;gap:12px;margin:10px 0;font-size:13px}
+  .chips{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+  .chip{font-size:11.5px;background:var(--panel);border:1px solid var(--line);
+    border-radius:20px;padding:3px 10px;color:var(--muted)}
+  details{margin-top:10px;font-size:13px}
+  summary{cursor:pointer;color:var(--accent);font-weight:600}
+  .poll{position:relative;background:#10131a;border:1px solid var(--line);
+    border-radius:8px;padding:10px;margin:8px 0 4px}
+  .poll pre{white-space:pre-wrap;word-break:break-word;margin:0 0 8px;
+    font-size:12px;color:var(--text);max-height:220px;overflow-y:auto}
+  .copy{font-size:12px;padding:5px 10px}
+  .notes{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.5}
+  .foot{font-size:12px;color:var(--muted);margin-top:10px;line-height:1.6}
+  .status-msg{padding:40px;text-align:center;color:var(--muted);font-size:15px;width:100%}
+  .status-msg.error{color:#ff9a9a}
+  footer{padding:14px 24px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .agenda-panel{
+    margin:0 24px 20px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px;
+  }
+  .agenda-panel[hidden]{display:none}
+  .agenda-panel h2{margin:0 0 12px;font-size:18px}
+  .agenda-output{
+    white-space:pre-wrap;
+    word-break:break-word;
+    background:#10131a;
+    border:1px solid var(--line);
+    border-radius:8px;
+    padding:14px;
+    font-size:13px;
+    line-height:1.5;
+    max-height:500px;
+    overflow-y:auto;
+  }
+  .agenda-actions{display:flex;gap:10px;margin-top:12px}
+  .agenda-date-row{display:flex;gap:10px;align-items:center;margin-bottom:12px;flex-wrap:wrap}
+  .agenda-date-row label{font-size:14px;color:var(--muted)}
+  .agenda-date-row input[type="date"]{background:var(--card);color:var(--text);
+    border:1px solid var(--line);border-radius:8px;padding:7px 10px;font:inherit;font-size:14px;
+    color-scheme:dark}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1><span class="crown">♛</span> Darkon Proposals — Senate Board</h1>
+    <div class="sub">Live view of the proposal tracker. Read-only — updates land here automatically.</div>
+  </div>
+  <div class="controls">
+    <span class="sub" id="updated"></span>
+    <button id="agenda-builder" type="button" disabled>Agenda Builder</button>
+    <button id="refresh" type="button">↻ Refresh</button>
+  </div>
+</header>
+<main id="board"><div class="status-msg" id="loading">Loading proposals from the tracker repo…</div></main>
+<section id="agenda-panel" class="agenda-panel" hidden>
+  <h2>Senate Agenda</h2>
+  <div class="agenda-date-row">
+    <label for="agenda-date">Senate date:</label>
+    <input type="date" id="agenda-date">
+    <button id="build-agenda" type="button">Build Agenda</button>
+  </div>
+  <pre id="agenda-output" class="agenda-output"></pre>
+  <div class="agenda-actions">
+    <button id="copy-agenda" type="button">Copy Agenda</button>
+    <button id="close-agenda" type="button">Close</button>
+  </div>
+</section>
+<footer>
+  <span>Data: <a href="https://github.com/zrandrews-achesmakes/darkonPropTracker-secured" target="_blank" rel="noopener noreferrer">zrandrews-achesmakes/darkonPropTracker-secured</a> (public)</span>
+  <span id="counts"></span>
+</footer>
+<script src="security.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>
+
